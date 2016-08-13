@@ -1,7 +1,15 @@
 package com.fhirmodel.processor;
 
-/**
- * Created by Sumit on 13/08/16.
- */
+import javax.lang.model.element.Element;
+
 public class ResourceProcessor {
+    private Element element;
+
+    ResourceProcessor(Element element) {
+        this.element = element;
+    }
+
+    public void process() {
+        
+    }
 }

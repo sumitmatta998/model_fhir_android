@@ -36,8 +36,14 @@ public class AnnotationProcessor extends AbstractProcessor {
 
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         Log.note("process");
+
+        for (TypeElement t : annotations){
+            Log.note("process annotation " + t.getSimpleName());
+        }
+
         for (Element annotatedElement : roundEnv.getElementsAnnotatedWith(Resource.class)) {
             Log.note("process simple Name " + annotatedElement.getSimpleName());
+            ResourceProcessor processor = new ResourceProcessor(annotatedElement);
         }
         return false;
     }
