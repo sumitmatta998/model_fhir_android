@@ -1,0 +1,14 @@
+group 'com.fhirmodel'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
